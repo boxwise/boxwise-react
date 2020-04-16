@@ -49,14 +49,17 @@ export default function App() {
           <PrivateRoute path="/org" pathRedirect="/" isLoggedIn={loggedIn}>
             <OrgTopLevel authObject={authObject} />
           </PrivateRoute>
-
           <Route path="/">
             <Home />
           </Route>
         </Switch>
       </div>
       {loggedIn ? (
-          <button onClick={() => handleLogOut()} className="log-in">
+          <button 
+            onClick={() => handleLogOut()}
+            className="m-1 bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+          >
             Log Out
           </button>
         ) : (
@@ -64,7 +67,7 @@ export default function App() {
             onClick={() => {
               Auth0.login();
             }}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Sign In</button>
+            className="m-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Sign In</button>
         )}
     </Router>
   );
