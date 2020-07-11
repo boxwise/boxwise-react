@@ -11,6 +11,7 @@ import Labels from "./views/Labels/Labels"
 import TabBar from "./views/TabBar"
 import Placeholder from "./views/Placeholder"
 import ScanBox from "./views/ScanBox"
+import Header from "./views/Header"
 
 const { REACT_APP_GRAPHQL_SERVER } = process.env
 
@@ -54,6 +55,7 @@ export default function App() {
 
   return (
     <ApolloProvider client={client}>
+      <Header isLoggedIn={loggedIn} />
       <Router>
         <div>
           {/* "Nav-bar" */}
