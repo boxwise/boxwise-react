@@ -10,8 +10,8 @@ import "semantic-ui-css/semantic.min.css"
 import "../styles/Header.scss"
 
 const ALL_CAMPS_QUERY = gql`
-  {
-    allBases {
+  query orgBases($org_id: Int = 2) {
+    orgBases(org_id: $org_id) {
       id
       organisation_id
       name
@@ -48,8 +48,9 @@ function Header(props: HeaderProps) {
         </Dropdown>
       )
     }
-    if (!selectedBase && data.allBases.length > 0) {
-      setSelectedBase(data.allBases[0].id) // defaultValue doesn't want to work on Dropdown
+
+    if (!selectedBase && data.orgBases.length > 1) {
+      setSelectedBase(data.orgBases[0].id) // defaultValue doesn't want to work on Dropdown
     }
     return (
       <Dropdown
@@ -57,7 +58,7 @@ function Header(props: HeaderProps) {
         selection
         multiple={false}
         search={false}
-        options={data.allBases.map((base) => {
+        options={data.orgBases.map((base) => {
           return {
             key: base.id,
             value: base.id,
