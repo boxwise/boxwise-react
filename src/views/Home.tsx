@@ -8,9 +8,7 @@ function Home() {
   const user = authObject.idTokenPayload.name
   return (
     <div>
-      <h2 className="w-screen flex justify-center p-2 bg-blue-500">
-        Welcome to boxwise, {user || `please log in`}.
-      </h2>
+      <Header />
       {!user && <p className="p-6 text-gray-800">Please Sign In</p>}
       {user && (
         <div className="p-6">
