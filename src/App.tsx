@@ -62,6 +62,7 @@ export default function App() {
       .then((authTokens) => {
         console.log("access token for the graphQL playground:", authTokens)
         setAuthObject(authTokens)
+        // eslint-disable-next-line no-unused-expressions
         authTokens ? setLoggedIn(true) : setLoggedIn(false)
       })
       .catch((err) => {
@@ -128,22 +129,13 @@ export default function App() {
                 <Labels />
               </PrivateRoute>
 
-              <PrivateRoute
-                path="/scan"
-                pathNameRedirect="/"
-              >
+              <PrivateRoute path="/scan" pathNameRedirect="/">
                 <ScanBox />
               </PrivateRoute>
-              <PrivateRoute
-                path="/warehouse"
-                pathNameRedirect="/"
-              >
+              <PrivateRoute path="/warehouse" pathNameRedirect="/">
                 <Placeholder />
               </PrivateRoute>
-              <PrivateRoute
-                path="/settings"
-                pathNameRedirect="/"
-              >
+              <PrivateRoute path="/settings" pathNameRedirect="/">
                 <Placeholder />
               </PrivateRoute>
               <Route path="/">

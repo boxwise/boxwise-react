@@ -19,6 +19,7 @@
     "import/no-named-as-default": "off",
     // codebase uses prop types some times and not others
     "react/prop-types": "off",
+    "react/no-array-index-key": "off",
     // should be turned on eventually, but not compatible with current codebase
     "no-shadow": "off",
     // matter of preference (allows to use props.propName instead of deconstructing props first)
@@ -29,7 +30,10 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     // suport for jsx files
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -45,7 +49,8 @@
         "ts": "never",
         "tsx": "never"
       }
-   ],
-   "no-debugger": 1
+    ],
+    "no-debugger": 1,
+    "camelcase": "off"
   }
 }
