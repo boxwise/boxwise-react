@@ -5,10 +5,10 @@ import { faLaptop } from "@fortawesome/free-solid-svg-icons"
 import { useQuery } from "@apollo/react-hooks"
 import { gql } from "apollo-boost"
 import { Dropdown, Message } from "semantic-ui-react"
+import AuthContext from "../AuthContext"
 import boxtributeFavicon from "../assets/images/favicon-32x32-boxtribute.png"
 import "semantic-ui-css/semantic.min.css"
-
-import AuthContext from "../AuthContext"
+import "../styles/Header.scss"
 
 const ALL_CAMPS_QUERY = gql`
   query orgBases($org_id: Int = 2) {
@@ -83,18 +83,16 @@ function Header() {
       </a>
       <div className="p-1">{campsDropdown}</div>
       <div className="flex-1 p-3 desktopAppLink">
-        <FontAwesomeIcon
-          style={{ fontSize: "1.5em" }}
-          icon={faLaptop}
-          className="float-right"
-        />
+        <a href="https://app.boxwise.co/">
+          <FontAwesomeIcon
+            style={{ fontSize: "1.5em" }}
+            icon={faLaptop}
+            className="float-right"
+          />
+        </a>
       </div>
     </div>
   )
 }
 
 export default Header
-
-interface HeaderProps {
-  isLoggedIn: boolean
-}
