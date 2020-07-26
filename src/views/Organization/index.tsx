@@ -7,7 +7,7 @@ import Placeholder from "../Placeholder"
 import Base from "../Base"
 
 // eslint-disable-next-line no-unused-vars
-export default function OrgTopLevel(props: IProps) {
+export default function OrgTopLevel() {
   return (
     <div className="p-6">
       {/* The Orgs page has its own <Switch> with more routes
@@ -49,5 +49,3 @@ export default function OrgTopLevel(props: IProps) {
     </div>
   )
 }
-
-interface IProps {}
