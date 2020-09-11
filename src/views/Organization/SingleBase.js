@@ -7,9 +7,8 @@ const BASE = gql`
   query Base($orgId: String!) {
     base(id: $orgId) {
       id
-      organisation_id
       name
-      currencyname
+      currencyName
     }
   }
 `;
@@ -42,8 +41,8 @@ export default function SingleOrg() {
         Requested base: {orgId}
       </h3>
       <p className="mb-4">
-        base ID {data.base.organisation_id} has the name {data.base.name}, and
-        uses the currency {data.base.currencyname}
+        base ID {data.base.id} has the name {data.base.name}, and
+        uses the currency {data.base.currencyName}
       </p>
       <Link className="mt-6 text-blue-700 hover:bg-blue-200" to="/">
         {`->`} Go Home
