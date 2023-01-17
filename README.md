@@ -2,6 +2,9 @@
        <img width="105" height="35" alt="JWT Auth for open source projects" src="https://cdn.auth0.com/oss/badges/a0-badge-dark.png"></a>
 
 # Boxwise react client 
+
+**THIS PROJECT WAS ARCHIVED ON OCTOBER 6, 2020. ITS CONTENTS HAVE INCORPORATED INTO THE MONOREPO: [BOXWISE/BOXTRIBUTE](https://github.com/boxwise/boxtribute)**
+
 This is the FE repo for the new mobile web-app of Boxwise. It goes with the BE Flask app at [boxwise-flask](https://github.com/boxwise/boxwise-flask).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
